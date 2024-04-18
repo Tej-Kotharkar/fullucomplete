@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Quiz</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="game.css">
+
+	<style>
+    body {
+        background-image: url('A1Master.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Add this CSS rule to change the question text color to black */
+    #player_question {
+        color: black;
+    }
+</style>
+</head>
+<body>
+    <!-- Display player names and scores -->
+    <h4 id="player1_name"></h4><span id="player1_score"></span>
+    <br>
+    <h4 id="player2_name"></h4><span id="player2_score"></span>
+
+    <!-- Main container for the game -->
+    <div class="container">
+        <center>
+            <h2 style="color: white;">Math Quiz!</h2>
+
+            <!-- Question and feedback section -->
+            <h3 id="player_question" ></h3>
+            <h3 id="player_feedback"></h3>
+
+            <!-- Output div for displaying questions -->
+            <div id="output" class="col-lg-4"></div>
+
+            <br><br>
+
+            <!-- Input fields for numbers and button to ask a question -->
+            <input type="number" id="number1" class="form-control" placeholder="Number 1">
+            <br>
+            <input type="number" id="number2" class="form-control" placeholder="Number 2">
+            <br>
+            <button onclick="askQuestion()" class="btn btn-success" style="width: 30%;">Ask</button>
+
+            <br>
+        </center>
+    </div>
+
+    <!-- Link to the JavaScript file that handles the game logic -->
+    <script src="game_page.js"></script>
+</body>
+</html>
